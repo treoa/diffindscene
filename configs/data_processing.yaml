@@ -1,0 +1,17 @@
+data:
+  root_dir: "data/3d_front"
+  output_dir: "processed_data"
+  mesh_size: 0.02  # meters
+  sdf_resolution: 0.04
+  tsdf_truncation: 0.12
+  crop_size: [96, 96, 96]
+
+processing:
+  num_workers: 8
+  batch_size: 4
+  device: "cuda"
+  sdfgen_path: "external/SDFGen"  # Path to SDFGen executable
+
+logging:
+  level: "INFO"
+  file_name: "processing.log"
