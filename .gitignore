@@ -1,5 +1,7 @@
-data/
+data/3d_front
+data/matterport
 __pycache__/
 example.py
 .DS_Store
 processed_data/
+*_archive.py

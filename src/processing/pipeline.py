@@ -1,9 +1,15 @@
 import os
+import json
 import logging
 
+import numpy as np
+
 from tqdm import tqdm
+from pathlib import Path
 from omegaconf import DictConfig
-from typing import Optional, List
+from dataclasses import dataclass
+from contextlib import contextmanager
+from typing import Optional, List, Dict, Any
 from concurrent.futures import ThreadPoolExecutor
 
 try:
@@ -86,8 +92,6 @@ class ProcessingPipeline:
     def process_dataset(self) -> None:
         """Process entire dataset with parallel execution"""
         scene_paths = self._get_scene_paths()
-        
-        logme(f"The scene paths: {scene_paths}")
         
         with ThreadPoolExecutor(max_workers=self.cfg.processing.num_workers) as executor:
             list(tqdm(
