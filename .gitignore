@@ -1,3 +1,5 @@
 data/
 __pycache__/
 example.py
+.DS_Store
+processed_data/

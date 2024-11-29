@@ -2,6 +2,7 @@ import os
 import logging
 
 from pathlib import Path
+
 from src.helpers import logme
 from src.processing import ProcessingPipeline
 from src.utils.config import ProcessingConfig
@@ -17,6 +18,7 @@ def main():
         project_root = Path(__file__).parent
         logme(f"Project root directory: {project_root}")
         logme(f"Config directory: {project_root / 'configs'}")
+        logme(f"Imported configs: {cfg}")
         
         # Initialize and run pipeline
         pipeline = ProcessingPipeline(cfg)
