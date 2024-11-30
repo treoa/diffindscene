@@ -3,9 +3,9 @@ import logging
 
 from pathlib import Path
 
-from src.helpers import logme
-from src.processing import ProcessingPipeline
-from src.utils.config import ProcessingConfig
+from src_archive.helpers import logme
+from src_archive.processing import ProcessingPipeline
+from src_archive.utils.config import ProcessingConfig
 
 
 def main():

@@ -5,3 +5,4 @@ example.py
 .DS_Store
 processed_data/
 *_archive.py
+*_archive
